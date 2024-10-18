@@ -64,3 +64,9 @@
     @apply w-full px-4 md:px-14 lg:px-20;
   }
 }
+
+.text-stroke {
+  color: hsl(var(--background));
+  -webkit-text-stroke: 1px hsl(var(--foreground));
+  font-family: sans-serif;
+}
