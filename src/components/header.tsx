@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="container flex items-center justify-between border-b border-muted bg-background py-4 text-foreground md:py-6">
-      <span className="flex items-center gap-3">
+      <a href="#" className="flex items-center gap-3">
         <svg
           width="40"
           height="40"
@@ -21,7 +21,7 @@ const Header = () => {
           <path d="M21.9992 16.2582C23.1294 15.128 23.1294 13.2956 21.9992 12.1654C20.8689 11.0351 19.0365 11.0351 17.9063 12.1654C16.7761 13.2956 16.7761 15.128 17.9063 16.2582C19.0365 17.3884 20.8689 17.3884 21.9992 16.2582Z" />
         </svg>
         <span className="text-xl font-bold">Peter</span>
-      </span>
+      </a>
       <nav className="hidden md:block">
         <ul className="flex items-center font-medium md:gap-4 md:text-base lg:gap-8 lg:text-lg">
           {SECTIONS.map((item) => (
