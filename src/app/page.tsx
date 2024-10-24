@@ -1,7 +1,7 @@
 'use client';
 import Header from '@/components/header';
 import Lottie, { Options } from 'react-lottie';
-import animationData from '@/animation3.json';
+import animationData from '@/userInterface.json';
 import { useEffect, useRef, useState } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { GithubIcon, GmailIcon, LinkedinIcon } from '@/components/shared/icons';
@@ -46,8 +46,8 @@ const Home = () => {
     <div>
       <Header />
       <main className="container flex flex-col-reverse items-center justify-between gap-4 py-8 lg:flex-row">
-        <section className="flex w-full flex-col md:items-center lg:items-start">
-          <div className="flex flex-col md:items-center lg:items-start">
+        <section className="flex w-full flex-col sm:items-center lg:items-start">
+          <div className="flex max-w-lg flex-col sm:text-center lg:max-w-full lg:text-start">
             <span className="text-3xl font-bold lg:text-5xl">
               Hi, I&apos;m Peter.
             </span>
@@ -62,7 +62,7 @@ const Home = () => {
               </strong>
               .
             </span>
-            <p className="mt-8 text-muted-foreground md:mx-0 md:mx-auto md:max-w-[80%] md:text-center md:text-lg lg:mx-0 lg:max-w-full lg:text-start">
+            <p className="mt-8 text-muted-foreground md:text-lg">
               I&apos;m a software engineer with a passion for building
               user-friendly interfaces. I have experience in building
               applications using modern technologies like <b>Typescript</b>,{' '}
@@ -81,13 +81,13 @@ const Home = () => {
                   title={title}
                   className="block size-full p-1"
                 >
-                  <Icon className="group-hover:fill-background" />
+                  <Icon className="fill-foreground group-hover:fill-background" />
                 </a>
               </li>
             ))}
           </ul>
         </section>
-        <section className="relative h-[300px] w-full md:h-[50vh] md:max-w-[800px] lg:h-[90vh]">
+        <section className="relative h-[300px] w-full sm:h-[70vh] md:max-w-[800px] lg:h-[90vh]">
           <div ref={ref} className="size-full">
             <Lottie options={defaultOptions} />
           </div>
