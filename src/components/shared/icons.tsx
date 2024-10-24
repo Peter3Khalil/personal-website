@@ -37,3 +37,43 @@ export const GmailIcon: FC<SvgProps> = (props) => (
     <path d="M16.9,41.4v9.8l24.5,18.4V37.8l-6.9-5.2C27.3,27.2,16.9,32.4,16.9,41.4z"></path>
   </svg>
 );
+
+export const ComputerIcon: FC<SvgProps> = (props) => (
+  <svg viewBox="0 0 24 24" {...props}>
+    <rect
+      width="23"
+      height="17"
+      x=".5"
+      y="1.5"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      rx="1.5"
+      ry="1.5"
+      className="colorStroke303c42 svgStroke stroke-primary"
+    ></rect>
+    <path
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9.5 18.5s.21 4-2 4h9c-2.21 0-2-4-2-4M.5 14.5h23"
+      className="colorStroke303c42 svgStroke stroke-primary"
+    ></path>
+    <circle
+      cx="12"
+      cy="16.5"
+      r=".5"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="colorStroke303c42 svgStroke stroke-primary"
+    ></circle>
+    <path
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9.5 5.5 6.5 8l3 2.5M14.5 5.5l3 2.5-3 2.5M10.5 11.5l3-7"
+      className="colorStroke303c42 svgStroke stroke-primary"
+    ></path>
+  </svg>
+);
