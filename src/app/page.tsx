@@ -36,13 +36,17 @@ const Home = () => {
               <span className="text-stroke">Engineer</span>
             </span>
             <span className="text-3xl font-normal lg:text-5xl">
-              I build <strong className="text-nowrap">web applications</strong>.
+              I build{' '}
+              <strong className="text-nowrap capitalize text-primary">
+                web apps
+              </strong>
+              .
             </span>
             <p className="mt-8 text-muted-foreground md:mx-0 md:mx-auto md:max-w-[80%] md:text-center md:text-lg lg:mx-0 lg:max-w-full lg:text-start">
               I&apos;m a software engineer with a passion for building
               user-friendly interfaces. I have experience in building
-              applications using modern technologies like React, Next.js, and
-              Tailwind CSS.
+              applications using modern technologies like <b>Typescript</b>,{' '}
+              <b>React</b>, <b>Next.js</b>, and <b>Tailwind CSS</b>.
             </p>
           </div>
         </div>
