@@ -89,7 +89,7 @@ const Home = () => {
             <Lottie options={defaultOptions} />
           </div>
           {!isSvgLoaded && (
-            <Skeleton className="absolute left-0 top-0 z-10 size-full" />
+            <Skeleton className="absolute left-0 top-0 z-10 size-full bg-accent-foreground/10" />
           )}
         </section>
       </main>
