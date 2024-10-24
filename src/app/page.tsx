@@ -27,12 +27,12 @@ const Home = () => {
             <span className="text-3xl font-normal lg:text-5xl">
               I build <strong className="text-nowrap">web applications</strong>.
             </span>
-            <span className="mt-8 text-muted-foreground md:mx-0 md:mx-auto md:max-w-[80%] md:text-center lg:max-w-full lg:text-start">
+            <p className="mt-8 text-muted-foreground md:mx-0 md:mx-auto md:max-w-[80%] md:text-center md:text-lg lg:mx-0 lg:max-w-full lg:text-start">
               I&apos;m a software engineer with a passion for building
               user-friendly interfaces. I have experience in building
               applications using modern technologies like React, Next.js, and
               Tailwind CSS.
-            </span>
+            </p>
           </div>
         </div>
         <div className="h-[300px] w-full md:h-[50vh] md:max-w-[800px] lg:h-[90vh]">
