@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="container sticky top-0 z-50 flex items-center justify-between border-b border-muted bg-background py-4 text-foreground md:py-6">
       <a href="#" className="flex items-center gap-3">
-        <ComputerIcon className="size-6 md:size-10" />
+        <ComputerIcon className="size-6 dark:*:stroke-primary-foreground md:size-10" />
         <span className="text-xl font-bold">Peter</span>
       </a>
       <nav className="hidden md:block">

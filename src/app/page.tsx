@@ -45,19 +45,16 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <main className="container flex flex-col-reverse items-center justify-between gap-4 py-8 lg:flex-row">
+      <main className="container flex flex-col-reverse items-center justify-between gap-4 bg-accent py-8 lg:flex-row">
         <section className="flex w-full flex-col sm:items-center lg:items-start">
           <div className="flex max-w-lg flex-col sm:text-center lg:max-w-full lg:text-start">
-            <span className="text-3xl font-bold lg:text-5xl">
-              Hi, I&apos;m Peter.
+            <span className="text-3xl lg:text-5xl">
+              Hi, I&apos;m <b>Peter</b>.
             </span>
-            <span className="text-3xl font-bold lg:text-5xl">
-              <strong className="underline underline-offset-8">Software</strong>{' '}
-              <span className="text-stroke">Engineer</span>
-            </span>
+            <b className="text-3xl lg:text-5xl">Software Engineer</b>
             <span className="text-3xl font-normal lg:text-5xl">
               I build{' '}
-              <strong className="text-nowrap capitalize text-primary">
+              <strong className="text-nowrap capitalize text-primary dark:text-primary-foreground">
                 web apps
               </strong>
               .
