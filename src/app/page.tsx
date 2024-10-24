@@ -2,7 +2,11 @@
 import Header from '@/components/header';
 import Lottie, { Options } from 'react-lottie';
 import animationData from '@/animation3.json';
+import { useEffect, useRef, useState } from 'react';
+import { Skeleton } from '@/components/ui/skeleton';
 const Home = () => {
+  const [isSvgLoaded, setIsSvgLoaded] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
   const defaultOptions: Options = {
     loop: true,
     autoplay: true,
@@ -11,6 +15,13 @@ const Home = () => {
       className: 'size-full',
     },
   };
+
+  useEffect(() => {
+    if (ref.current?.innerHTML) {
+      setIsSvgLoaded(true);
+    }
+  }, []);
+
   return (
     <div>
       <Header />
@@ -35,8 +46,13 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="h-[300px] w-full md:h-[50vh] md:max-w-[800px] lg:h-[90vh]">
-          <Lottie options={defaultOptions} />
+        <div className="relative h-[300px] w-full md:h-[50vh] md:max-w-[800px] lg:h-[90vh]">
+          <div ref={ref} className="size-full">
+            <Lottie options={defaultOptions} />
+          </div>
+          {!isSvgLoaded && (
+            <Skeleton className="absolute left-0 top-0 z-10 size-full" />
+          )}
         </div>
       </main>
     </div>
