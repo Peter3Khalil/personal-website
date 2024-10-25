@@ -48,7 +48,7 @@ const Hero: FC<React.HTMLAttributes<HTMLDivElement>> = ({
   return (
     <main
       className={cn(
-        'container relative flex flex-col-reverse items-center justify-between gap-4 bg-accent py-8 lg:flex-row',
+        'container relative flex flex-col-reverse items-center justify-between gap-4 bg-accent lg:flex-row',
         className,
       )}
       {...props}
@@ -84,6 +84,7 @@ const Hero: FC<React.HTMLAttributes<HTMLDivElement>> = ({
                 target="_blank"
                 title={title}
                 className="block size-full p-1"
+                rel="noreferrer"
               >
                 <Icon className="fill-foreground group-hover:fill-background" />
               </a>

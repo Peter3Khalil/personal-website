@@ -61,7 +61,7 @@
 
 @layer components {
   .container {
-    @apply w-full px-4 md:px-14 lg:px-20;
+    @apply w-full px-4 py-8 md:px-14 lg:px-20;
   }
 }
 
