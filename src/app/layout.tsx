@@ -1,4 +1,5 @@
 import '@/app/globals.css';
+import { ThemeProvider } from '@/components/theme-provider';
 import { Metadata } from 'next';
 import { Sora } from 'next/font/google';
 import React from 'react';
@@ -24,7 +25,14 @@ export default function RootLayout({
       <body
         className={`bg-background text-foreground antialiased ${sora.className}`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

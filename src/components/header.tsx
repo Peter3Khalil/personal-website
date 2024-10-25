@@ -1,5 +1,6 @@
 'use client';
 import { ComputerIcon } from '@/components/shared/icons';
+import ThemeSwitcher from '@/components/theme-switcher';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Download, Menu } from 'lucide-react';
@@ -23,38 +24,41 @@ const Header = () => {
           ))}
         </ul>
       </nav>
-      <Button className="hidden font-semibold md:flex">
-        Resume <Download className="ms-1" size={20} />
-      </Button>
-      <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetTrigger asChild>
-          <button className="md:hidden">
-            <Menu size={24} />
-          </button>
-        </SheetTrigger>
-        <SheetContent className="flex flex-col">
-          <nav className="mt-8">
-            <ul className="flex flex-col gap-2 font-medium">
-              {SECTIONS.map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase().replace(' ', '-')}`}
-                    onClick={() => setIsOpen(false)}
-                    className="block rounded p-2 hover:bg-muted"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <div className="flex flex-1 items-end">
-            <Button className="w-full font-semibold">
-              Resume <Download className="ms-1" size={20} />
-            </Button>
-          </div>
-        </SheetContent>
-      </Sheet>
+      <div className="flex items-center gap-4">
+        <ThemeSwitcher />
+        <Button className="hidden font-semibold md:flex">
+          Resume <Download className="ms-1" size={20} />
+        </Button>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild>
+            <button className="md:hidden">
+              <Menu size={24} />
+            </button>
+          </SheetTrigger>
+          <SheetContent className="flex flex-col">
+            <nav className="mt-8">
+              <ul className="flex flex-col gap-2 font-medium">
+                {SECTIONS.map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item.toLowerCase().replace(' ', '-')}`}
+                      onClick={() => setIsOpen(false)}
+                      className="block rounded p-2 hover:bg-muted"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div className="flex flex-1 items-end">
+              <Button className="w-full font-semibold">
+                Resume <Download className="ms-1" size={20} />
+              </Button>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
     </header>
   );
 };
