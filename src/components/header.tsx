@@ -35,7 +35,7 @@ const Header = () => {
               <Menu size={24} />
             </button>
           </SheetTrigger>
-          <SheetContent className="flex flex-col">
+          <SheetContent className="flex flex-col dark:border-input">
             <nav className="mt-8">
               <ul className="flex flex-col gap-2 font-medium">
                 {SECTIONS.map((item) => (
