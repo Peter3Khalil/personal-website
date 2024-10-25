@@ -64,7 +64,7 @@ const Home = () => {
       <Hero />
       <section className="container py-8">
         <h2 className="text-center text-3xl font-bold">My Skills</h2>
-        <ul className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7">
+        <ul className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 md:gap-x-10 lg:grid-cols-6 lg:gap-x-14">
           {SKILLS.map(({ icon: Icon, name }, index) => (
             <li
               key={index}
