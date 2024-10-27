@@ -7,7 +7,7 @@ import Experience from '@/components/experience';
 
 const Home = () => {
   return (
-    <div>
+    <div className="h-svh overflow-auto">
       <Header />
       <Hero />
       <Skills />
