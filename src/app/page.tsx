@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '@/components/header';
 import Hero from '@/components/hero';
 import Skills from '@/components/skills';
+import Experience from '@/components/experience';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Header />
       <Hero />
       <Skills />
+      <Experience />
     </div>
   );
 };

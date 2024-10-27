@@ -62,3 +62,25 @@ export const SKILLS = [
     name: 'Jest',
   },
 ];
+
+export const EXPERIENCES = [
+  {
+    icon: Icons.GithubIcon,
+    title: 'Software Engineer at Github',
+    date: '2019 - Present',
+    description: [
+      "**Played** a pivotal role in developing innovative solutions for Google's core search algorithms.",
+      '**Collaborated** with a dynamic team of engineers to enhance search accuracy and efficiency.',
+      '**Optimized** user experiences for millions of users worldwide.',
+    ],
+  },
+  {
+    title: 'Software Engineer at Github',
+    date: '2019 - Present',
+    description: [
+      "**Played** a pivotal role in developing innovative solutions for Google's core search algorithms.",
+      '**Collaborated** with a dynamic team of engineers to enhance search accuracy and efficiency.',
+      '**Optimized** user experiences for millions of users worldwide.',
+    ],
+  },
+];
