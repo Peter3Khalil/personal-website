@@ -67,10 +67,11 @@ const Hero: FC<React.HTMLAttributes<HTMLDivElement>> = ({
             .
           </span>
           <p className="mt-8 text-muted-foreground md:text-lg">
-            I&apos;m a software engineer with a passion for building
-            user-friendly interfaces. I have experience in building applications
-            using modern technologies like <b>Typescript</b>, <b>React</b>,{' '}
-            <b>Next.js</b>, and <b>Tailwind CSS</b>.
+            I&apos;m a software engineer with a passion for building{' '}
+            <span className="text-nowrap">user-friendly</span> interfaces. I
+            have experience in building applications using modern technologies
+            like <b>Typescript</b>, <b>React</b>, <b>Next.js</b>, and{' '}
+            <b>Tailwind CSS</b>.
           </p>
         </div>
         <ul className="mt-12 flex flex-wrap items-center gap-4">
