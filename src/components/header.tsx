@@ -3,14 +3,24 @@ import { ComputerIcon } from '@/components/shared/icons';
 import ThemeSwitcher from '@/components/theme-switcher';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { cn } from '@/lib/utils';
 import { Download, Menu } from 'lucide-react';
-import { useState } from 'react';
+import React, { FC, useState } from 'react';
 const SECTIONS = ['About Me', 'Skills', 'Projects', 'Contact Me'];
-const Header = () => {
+const Header: FC<React.HTMLAttributes<HTMLDivElement>> = ({
+  className,
+  ...props
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="container sticky top-0 z-50 flex items-center justify-between border-b border-muted bg-background py-4 text-foreground md:py-6">
+    <header
+      className={cn(
+        'container sticky top-0 z-50 flex items-center justify-between border-b border-muted bg-background py-4 text-foreground md:py-6',
+        className,
+      )}
+      {...props}
+    >
       <a href="#" className="flex items-center gap-3">
         <ComputerIcon className="size-6 dark:*:stroke-primary-foreground md:size-10" />
         <span className="text-xl font-bold">Peter</span>
