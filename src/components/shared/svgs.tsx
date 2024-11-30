@@ -6,7 +6,7 @@ type SvgProps = React.SVGProps<SVGSVGElement>;
 export const AboutMeSvg: FC<SvgProps> = ({ className, ...props }) => (
   <svg
     viewBox="0 0 530 572"
-    preserveAspectRatio="true"
+    preserveAspectRatio="xMinYMin meet"
     xmlns="http://www.w3.org/2000/svg"
     className={cn(
       'mx-auto h-auto max-h-[572px] w-full fill-none md:max-w-[300px] lg:max-w-[530px]',
