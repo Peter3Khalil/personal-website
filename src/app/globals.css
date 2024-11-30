@@ -63,6 +63,9 @@
   .container {
     @apply w-full px-4 py-16 md:px-14 lg:px-20;
   }
+  .section-title {
+    @apply text-3xl font-bold lg:text-4xl;
+  }
 }
 
 .text-stroke {

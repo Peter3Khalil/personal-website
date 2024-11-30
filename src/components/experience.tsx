@@ -14,9 +14,7 @@ const Experience: FC<React.HTMLAttributes<HTMLDivElement>> = ({
       )}
       {...props}
     >
-      <h2 className="text-center text-3xl font-bold lg:text-4xl">
-        My Experience
-      </h2>
+      <h2 className="section-title text-center">My Experience</h2>
       <ul className="mt-12 flex flex-col gap-4">
         {EXPERIENCES.map(({ date, description, icon: Icon, title }, index) => (
           <li

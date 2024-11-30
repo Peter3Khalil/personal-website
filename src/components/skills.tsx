@@ -8,7 +8,7 @@ const Skills: FC<React.HTMLAttributes<HTMLDivElement>> = ({
 }) => {
   return (
     <section className={cn('container', className)} {...props}>
-      <h2 className="text-center text-3xl font-bold lg:text-4xl">My Skills</h2>
+      <h2 className="section-title text-center">My Skills</h2>
       <ul className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-x-10 lg:grid-cols-6">
         {SKILLS.map(({ icon: Icon, name }, index) => (
           <li
