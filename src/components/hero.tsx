@@ -74,15 +74,15 @@ const SvgContainer: FC<React.HTMLAttributes<HTMLDivElement>> = ({
       )}
       {...props}
     >
-      <div
-        ref={(e) => {
-          if (e) {
-            setIsSvgLoaded(true);
-          }
-        }}
-        className="size-full"
-      >
-        <Lottie options={defaultOptions} />
+      <div className="size-full">
+        <Lottie
+          ref={(e) => {
+            if (e) {
+              setIsSvgLoaded(true);
+            }
+          }}
+          options={defaultOptions}
+        />
       </div>
       {!isSvgLoaded && (
         <Skeleton className="absolute left-0 top-0 z-10 size-full bg-accent-foreground/10" />
