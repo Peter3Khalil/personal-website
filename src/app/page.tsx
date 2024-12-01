@@ -3,6 +3,7 @@ import AboutMe from '@/components/about-me';
 import Experience from '@/components/experience';
 import Header from '@/components/header';
 import Hero from '@/components/hero';
+import Projects from '@/components/projects';
 import Skills from '@/components/skills';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <Hero />
       <Skills />
       <Experience />
+      <Projects />
       <AboutMe />
     </div>
   );
