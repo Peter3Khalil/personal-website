@@ -7,13 +7,7 @@ const Experience: FC<React.HTMLAttributes<HTMLDivElement>> = ({
   ...props
 }) => {
   return (
-    <section
-      className={cn(
-        'container border-t bg-foreground text-background dark:border-input dark:bg-background dark:text-foreground',
-        className,
-      )}
-      {...props}
-    >
+    <section className={cn('dark-container', className)} {...props}>
       <h2 className="section-title text-center">My Experience</h2>
       <ul className="mt-12 flex flex-col gap-4">
         {EXPERIENCES.map(({ date, description, icon: Icon, title }, index) => (

@@ -66,6 +66,9 @@
   .section-title {
     @apply text-3xl font-bold lg:text-4xl;
   }
+  .dark-container {
+    @apply container bg-foreground text-background dark:bg-background dark:text-foreground;
+  }
 }
 
 .text-stroke {
