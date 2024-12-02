@@ -63,7 +63,7 @@ const Project: FC<ProjectProps> = ({
   return (
     <div
       className={cn(
-        'mx-auto flex w-full max-w-[1200px] flex-col items-center gap-x-10 gap-y-7 md:flex-row md:justify-between lg:gap-x-24',
+        'mx-auto flex w-full max-w-[1400px] flex-col items-center gap-x-10 gap-y-7 md:flex-row md:justify-between lg:gap-x-24',
         className,
       )}
       {...props}
