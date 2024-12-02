@@ -17,7 +17,7 @@ const INPUTS: React.HTMLProps<HTMLInputElement>[] = [
 ];
 const Contact = () => {
   return (
-    <div className="container dark:bg-accent">
+    <div className="container dark:bg-accent/50">
       <div className="mx-auto flex max-w-[1400px] flex-col justify-between gap-10 *:flex-1 md:flex-row md:items-center lg:gap-x-24">
         <form className="space-y-4">
           {INPUTS.map((input, index) => (
