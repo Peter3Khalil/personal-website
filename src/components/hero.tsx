@@ -1,29 +1,11 @@
 'use client';
-import { GithubIcon, GmailIcon, LinkedinIcon } from '@/components/shared/icons';
 import DotPattern from '@/components/ui/dot-pattern';
 import { Skeleton } from '@/components/ui/skeleton';
+import { SOCIAL_LINKS } from '@/constants/data';
 import { cn } from '@/lib/utils';
 import animationData from '@/userInterface.json';
 import React, { FC, useState } from 'react';
 import Lottie, { Options } from 'react-lottie';
-
-const SOCIAL_LINKS = [
-  {
-    title: 'Github account',
-    icon: GithubIcon,
-    href: 'https://github.com/Peter3Khalil',
-  },
-  {
-    title: 'Linkedin account',
-    icon: LinkedinIcon,
-    href: 'https://www.linkedin.com/in/peter-khalil-frontend-developer',
-  },
-  {
-    title: 'Gmail account',
-    icon: GmailIcon,
-    href: 'mailto:peter.khalil.fahmy@gmail.com',
-  },
-];
 
 const Hero: FC<React.HTMLAttributes<HTMLDivElement>> = ({
   className,

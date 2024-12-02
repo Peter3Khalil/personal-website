@@ -84,3 +84,21 @@ export const EXPERIENCES = [
     ],
   },
 ];
+
+export const SOCIAL_LINKS = [
+  {
+    title: 'Github account',
+    icon: Icons.GithubIcon,
+    href: 'https://github.com/Peter3Khalil',
+  },
+  {
+    title: 'Linkedin account',
+    icon: Icons.LinkedinIcon,
+    href: 'https://www.linkedin.com/in/peter-khalil-frontend-developer',
+  },
+  {
+    title: 'Gmail account',
+    icon: Icons.GmailIcon,
+    href: 'mailto:peter.khalil.fahmy@gmail.com',
+  },
+];
