@@ -125,7 +125,20 @@ const HeroContent: FC<React.HTMLAttributes<HTMLDivElement>> = ({
             </li>
           ))}
         </ul>
-        <Button className="mt-4 self-stretch">Hire Me</Button>
+        <Button className="mt-4 self-stretch" asChild>
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector(`#contact`)?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }}
+          >
+            Get in Touch
+          </a>
+        </Button>
       </div>
     </section>
   );
