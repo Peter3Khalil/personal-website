@@ -145,4 +145,18 @@ export const PROJECTS: ProjectType[] = [
     ],
     previewLink: 'https://dynamicsa.co/en',
   },
+  {
+    title: 'Landing Page for a architectural contracting company',
+    imgSrc: 'basamat.webp',
+    description: `A modern and responsive landing page for an architectural contracting company. The website includes sections for about, services, and projects, with a clean and professional design.`,
+    skills: [
+      'react',
+      'next.js',
+      'typescript',
+      'tailwindcss',
+      'shadcnui',
+      'framer-motion',
+    ],
+    previewLink: 'https://basmatalwosta.com',
+  },
 ];
