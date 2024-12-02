@@ -23,7 +23,10 @@ const AboutMe: FC<React.HTMLAttributes<HTMLDivElement>> = ({
       )}
       {...props}
     >
-      <div className="border md:h-[500px]" style={{ transform: 'scaleX(-1)' }}>
+      <div
+        className="rounded-md border dark:border-input md:h-[500px]"
+        style={{ transform: 'scaleX(-1)' }}
+      >
         <Lottie options={defaultOptions} />
       </div>
       <article className="flex-1 md:max-w-[700px]">
