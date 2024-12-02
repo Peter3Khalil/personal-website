@@ -69,7 +69,7 @@ const Project: FC<ProjectProps> = ({
         <span className="block text-2xl font-semibold leading-none">
           {String(index + 1).padStart(2, '0')}
         </span>
-        <h3 className="text-2xl font-semibold leading-none hover:underline">
+        <h3 className="text-2xl font-semibold hover:underline">
           <a href={previewLink} target="_blank" rel="noreferrer">
             {title}
           </a>
