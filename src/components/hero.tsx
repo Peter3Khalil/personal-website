@@ -14,7 +14,7 @@ const Hero: FC<React.HTMLAttributes<HTMLDivElement>> = ({
   return (
     <main
       className={cn(
-        'container relative flex flex-col-reverse items-center justify-between gap-4 bg-accent lg:flex-row',
+        'container relative flex flex-col-reverse items-center justify-between gap-4 bg-accent/50 lg:flex-row',
         className,
       )}
       {...props}
