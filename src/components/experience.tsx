@@ -13,7 +13,7 @@ const Experience: FC<React.HTMLAttributes<HTMLDivElement>> = ({
         {EXPERIENCES.map(({ date, description, icon: Icon, title }, index) => (
           <li
             key={index}
-            className="mx-auto w-full max-w-[1000px] rounded border border-muted-foreground/20 bg-accent-foreground px-6 py-8 dark:bg-accent/40"
+            className="mx-auto w-full max-w-[1000px] rounded border border-muted-foreground/20 bg-muted-foreground/30 px-6 py-8 dark:bg-muted/80"
           >
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div className="flex items-center gap-7">
