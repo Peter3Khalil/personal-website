@@ -2,7 +2,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { SOCIAL_LINKS } from '@/constants/data';
-import React from 'react';
+import { cn } from '@/lib/utils';
+import React, { FC } from 'react';
 const INPUTS: React.HTMLProps<HTMLInputElement>[] = [
   {
     placeholder: 'Your Name',
@@ -15,9 +16,12 @@ const INPUTS: React.HTMLProps<HTMLInputElement>[] = [
     required: true,
   },
 ];
-const Contact = () => {
+const Contact: FC<React.HTMLAttributes<HTMLDivElement>> = ({
+  className,
+  ...props
+}) => {
   return (
-    <div className="container dark:bg-accent/50">
+    <div className={cn('container dark:bg-accent/50', className)} {...props}>
       <div className="mx-auto flex max-w-[1400px] flex-col justify-between gap-10 *:flex-1 md:flex-row md:items-center lg:gap-x-24">
         <form className="space-y-4">
           {INPUTS.map((input, index) => (
