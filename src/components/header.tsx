@@ -6,7 +6,15 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { Download, Menu } from 'lucide-react';
 import React, { FC, useState } from 'react';
-const SECTIONS = ['About Me', 'Skills', 'Projects', 'Contact Me'];
+const SECTIONS = [
+  'home',
+  'skills',
+  'experience',
+  'about',
+  'projects',
+  'contact',
+];
+
 const Header: FC<React.HTMLAttributes<HTMLDivElement>> = ({
   className,
   ...props
@@ -26,10 +34,23 @@ const Header: FC<React.HTMLAttributes<HTMLDivElement>> = ({
         <span className="text-xl font-bold">Peter</span>
       </a>
       <nav className="hidden md:block">
-        <ul className="flex items-center font-medium md:gap-4 md:text-base lg:gap-8 lg:text-lg">
+        <ul className="flex items-center font-medium capitalize md:gap-4 md:text-sm lg:gap-8 lg:text-lg">
           {SECTIONS.map((item) => (
             <li key={item}>
-              <a href={`#${item.toLowerCase().replace(' ', '-')}`}>{item}</a>
+              <a
+                href={`#${item.toLowerCase().replace(' ', '-')}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .querySelector(`#${item.toLowerCase().replace(' ', '-')}`)
+                    ?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    });
+                }}
+              >
+                {item}
+              </a>
             </li>
           ))}
         </ul>
@@ -47,7 +68,7 @@ const Header: FC<React.HTMLAttributes<HTMLDivElement>> = ({
           </SheetTrigger>
           <SheetContent className="flex flex-col dark:border-input">
             <nav className="mt-8">
-              <ul className="flex flex-col gap-2 font-medium">
+              <ul className="flex flex-col gap-2 font-medium capitalize">
                 {SECTIONS.map((item) => (
                   <li key={item}>
                     <a

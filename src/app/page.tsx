@@ -12,12 +12,12 @@ const Home = () => {
   return (
     <div className="h-svh overflow-auto">
       <Header />
-      <Hero />
-      <Skills />
-      <Experience />
-      <AboutMe />
-      <Projects />
-      <Contact />
+      <Hero id="home" />
+      <Skills id="skills" />
+      <Experience id="experience" />
+      <AboutMe id="about" />
+      <Projects id="projects" />
+      <Contact id="contact" />
       <Footer />
     </div>
   );
