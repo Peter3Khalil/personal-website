@@ -50,18 +50,30 @@ const Project: FC<ProjectProps> = ({
       )}
       {...props}
     >
-      <figure className="relative flex-1 rounded-lg border border-input/40 dark:border-input md:max-w-[600px]">
+      <figure className="group relative flex-1 rounded-lg border border-input/40 dark:border-input md:max-w-[600px]">
         <img
           src={'/projects/' + imgSrc}
-          alt="Project"
+          alt={title}
+          loading="lazy"
           className="w-full rounded-lg object-cover"
         />
+        <div className="absolute left-0 top-0 flex size-full items-center justify-center gap-4 rounded-lg bg-accent-foreground/50 opacity-0 duration-300 group-hover:opacity-100 dark:bg-accent/50">
+          <Button asChild>
+            <a href={previewLink} target="_blank" rel="noreferrer">
+              View
+            </a>
+          </Button>
+        </div>
       </figure>
       <article className="max-w-[600px] flex-1 space-y-6">
         <span className="block text-2xl font-semibold leading-none">
           {String(index + 1).padStart(2, '0')}
         </span>
-        <h3 className="text-2xl font-semibold leading-none">{title}</h3>
+        <h3 className="text-2xl font-semibold leading-none hover:underline">
+          <a href={previewLink} target="_blank" rel="noreferrer">
+            {title}
+          </a>
+        </h3>
         <p className="mt-4 text-muted/70 dark:text-muted-foreground">
           {description}
         </p>
@@ -75,21 +87,23 @@ const Project: FC<ProjectProps> = ({
             </li>
           ))}
         </ul>
-        <menu className="flex gap-4 *:flex-1">
+        <menu className="flex gap-4">
           <Button asChild>
             <a href={previewLink} target="_blank" rel="noreferrer">
               View
             </a>
           </Button>
-          <Button
-            variant="secondary"
-            className="bg-accent/20 text-secondary hover:bg-accent/15 dark:bg-secondary dark:text-secondary-foreground dark:hover:bg-secondary/80"
-            asChild
-          >
-            <a href={sourceCodeLink} target="_blank" rel="noreferrer">
-              Source Code
-            </a>
-          </Button>
+          {sourceCodeLink && (
+            <Button
+              variant="secondary"
+              className="bg-accent/20 text-secondary hover:bg-accent/15 dark:bg-secondary dark:text-secondary-foreground dark:hover:bg-secondary/80"
+              asChild
+            >
+              <a href={sourceCodeLink} target="_blank" rel="noreferrer">
+                Source Code
+              </a>
+            </Button>
+          )}
         </menu>
       </article>
     </div>

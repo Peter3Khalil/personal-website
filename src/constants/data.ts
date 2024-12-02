@@ -6,7 +6,7 @@ export type ProjectType = {
   description: string;
   skills: string[];
   previewLink: string;
-  sourceCodeLink: string;
+  sourceCodeLink?: string;
 };
 
 export const SKILLS = [
@@ -120,6 +120,7 @@ export const PROJECTS: ProjectType[] = [
       'A responsive admin dashboard featuring multiple themes, designed for managing users, events, and categories. It supports comprehensive CRUD operations along with authentication and authorization.',
     skills: [
       'react',
+      'nextjs',
       'typescript',
       'tailwindcss',
       'react-query',
@@ -128,5 +129,20 @@ export const PROJECTS: ProjectType[] = [
     ],
     previewLink: 'https://eventownadmin.netlify.app',
     sourceCodeLink: 'https://github.com/Peter3Khalil/event-town-dashboard',
+  },
+  {
+    title: 'Portfolio Website for a Company',
+    imgSrc: 'dynamic.webp',
+    description:
+      "A professional portfolio website for showcasing a company's projects and services. It includes sections for about, services, projects, and contact, with a modern and responsive design. The website also supports multiple language.",
+    skills: [
+      'react',
+      'next.js',
+      'typescript',
+      'tailwindcss',
+      'shadcnui',
+      'framer-motion',
+    ],
+    previewLink: 'https://dynamicsa.co/en',
   },
 ];
