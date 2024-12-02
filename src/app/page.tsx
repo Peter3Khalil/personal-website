@@ -1,5 +1,6 @@
 'use client';
 import AboutMe from '@/components/about-me';
+import Contact from '@/components/contact';
 import Experience from '@/components/experience';
 import Header from '@/components/header';
 import Hero from '@/components/hero';
@@ -15,6 +16,7 @@ const Home = () => {
       <Experience />
       <AboutMe />
       <Projects />
+      <Contact />
     </div>
   );
 };
