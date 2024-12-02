@@ -75,7 +75,7 @@ const Project: FC<ProjectProps> = ({
             </li>
           ))}
         </ul>
-        <menu className="flex flex-col gap-4 *:flex-1 sm:flex-row">
+        <menu className="flex gap-4 *:flex-1">
           <Button asChild>
             <a href={previewLink} target="_blank" rel="noreferrer">
               View
