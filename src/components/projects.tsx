@@ -1,25 +1,7 @@
 import { Button } from '@/components/ui/button';
+import { PROJECTS, ProjectType } from '@/constants/data';
 import { cn } from '@/lib/utils';
 import React, { FC } from 'react';
-type ProjectType = {
-  title: string;
-  imgSrc: string;
-  index?: number;
-  description: string;
-  skills: string[];
-  previewLink: string;
-  sourceCodeLink: string;
-};
-
-const sampleProject: ProjectType = {
-  title: 'Project Title',
-  imgSrc: 'project.png',
-  description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisi eget tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisi eget tincidunt.',
-  skills: ['react', 'typescript', 'tailwindcss', 'firebase', 'vercel', 'css'],
-  previewLink: '#',
-  sourceCodeLink: '#',
-};
 
 const Projects: FC<React.HTMLAttributes<HTMLDivElement>> = ({
   className,
@@ -29,10 +11,10 @@ const Projects: FC<React.HTMLAttributes<HTMLDivElement>> = ({
     <section className={cn('dark-container', className)} {...props}>
       <h2 className="section-title text-center">My Projects</h2>
       <ul className="mt-12 flex flex-col gap-5 md:gap-24 lg:gap-28">
-        {Array.from({ length: 5 }).map((_, index) => (
+        {PROJECTS.map((project, index) => (
           <li key={index}>
             <Project
-              project={{ ...sampleProject, index }}
+              project={{ ...project, index }}
               className={cn({
                 'md:flex-row-reverse': index % 2 !== 0,
               })}
@@ -68,11 +50,11 @@ const Project: FC<ProjectProps> = ({
       )}
       {...props}
     >
-      <figure className="relative h-[400px] flex-1 rounded-md md:max-w-[600px]">
+      <figure className="relative flex-1 rounded-lg border border-input/40 dark:border-input md:max-w-[600px]">
         <img
-          src={imgSrc}
+          src={'/projects/' + imgSrc}
           alt="Project"
-          className="size-full rounded-[inherit] object-cover"
+          className="w-full rounded-lg object-cover"
         />
       </figure>
       <article className="max-w-[600px] flex-1 space-y-6">
@@ -95,14 +77,18 @@ const Project: FC<ProjectProps> = ({
         </ul>
         <menu className="flex flex-col gap-4 *:flex-1 sm:flex-row">
           <Button asChild>
-            <a href={previewLink}>View</a>
+            <a href={previewLink} target="_blank" rel="noreferrer">
+              View
+            </a>
           </Button>
           <Button
             variant="secondary"
-            className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/80 dark:bg-secondary dark:text-secondary-foreground dark:hover:bg-secondary/80"
+            className="bg-accent/20 text-secondary hover:bg-accent/15 dark:bg-secondary dark:text-secondary-foreground dark:hover:bg-secondary/80"
             asChild
           >
-            <a href={sourceCodeLink}>Source Code</a>
+            <a href={sourceCodeLink} target="_blank" rel="noreferrer">
+              Source Code
+            </a>
           </Button>
         </menu>
       </article>

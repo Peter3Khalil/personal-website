@@ -1,4 +1,13 @@
 import * as Icons from '@/components/shared/icons';
+export type ProjectType = {
+  title: string;
+  imgSrc: string;
+  index?: number;
+  description: string;
+  skills: string[];
+  previewLink: string;
+  sourceCodeLink: string;
+};
 
 export const SKILLS = [
   {
@@ -100,5 +109,24 @@ export const SOCIAL_LINKS = [
     title: 'Gmail account',
     icon: Icons.GmailIcon,
     href: 'mailto:peter.khalil.fahmy@gmail.com',
+  },
+];
+
+export const PROJECTS: ProjectType[] = [
+  {
+    title: 'Admin Dashboard',
+    imgSrc: 'dashboard.webp',
+    description:
+      'A responsive admin dashboard featuring multiple themes, designed for managing users, events, and categories. It supports comprehensive CRUD operations along with authentication and authorization.',
+    skills: [
+      'react',
+      'typescript',
+      'tailwindcss',
+      'react-query',
+      'react-hook-form',
+      'shadcnui',
+    ],
+    previewLink: 'https://eventownadmin.netlify.app',
+    sourceCodeLink: 'https://github.com/Peter3Khalil/event-town-dashboard',
   },
 ];
