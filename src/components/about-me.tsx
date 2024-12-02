@@ -1,20 +1,31 @@
-import { AboutMeSvg } from '@/components/shared/svgs';
+import animationData from '@/aboutMe.json';
 import { cn } from '@/lib/utils';
 import React, { FC } from 'react';
+import Lottie, { Options } from 'react-lottie';
 
 const AboutMe: FC<React.HTMLAttributes<HTMLDivElement>> = ({
   className,
   ...props
 }) => {
+  const defaultOptions: Options = {
+    loop: true,
+    autoplay: true,
+    animationData,
+    rendererSettings: {
+      className: 'size-full',
+    },
+  };
   return (
     <section
       className={cn(
-        'container flex flex-col gap-8 border-t border-muted-foreground/20 md:flex-row md:gap-16',
+        'container flex flex-col gap-8 border-t border-muted-foreground/20 md:gap-16 lg:flex-row',
         className,
       )}
       {...props}
     >
-      <AboutMeSvg />
+      <div className="border md:h-[500px]" style={{ transform: 'scaleX(-1)' }}>
+        <Lottie options={defaultOptions} />
+      </div>
       <article className="flex-1 md:max-w-[700px]">
         <h2 className="section-title">About Me</h2>
         <div className="mt-8 flex flex-col gap-4 text-muted-foreground md:gap-6 md:text-lg">
