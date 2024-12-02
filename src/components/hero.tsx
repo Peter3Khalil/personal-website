@@ -1,4 +1,5 @@
 'use client';
+import { Button } from '@/components/ui/button';
 import DotPattern from '@/components/ui/dot-pattern';
 import { Skeleton } from '@/components/ui/skeleton';
 import { SOCIAL_LINKS } from '@/constants/data';
@@ -105,24 +106,27 @@ const HeroContent: FC<React.HTMLAttributes<HTMLDivElement>> = ({
           <b>Tailwind CSS</b>.
         </p>
       </div>
-      <ul className="mt-12 flex flex-wrap items-center gap-4">
-        {SOCIAL_LINKS.map(({ href, title, icon: Icon }, index) => (
-          <li
-            key={index}
-            className="group size-8 rounded border-2 border-foreground duration-200 hover:bg-foreground"
-          >
-            <a
-              href={href}
-              target="_blank"
-              title={title}
-              className="block size-full p-1"
-              rel="noreferrer"
+      <div className="flex w-fit flex-col items-start">
+        <ul className="mt-12 flex flex-wrap items-center gap-4">
+          {SOCIAL_LINKS.map(({ href, title, icon: Icon }, index) => (
+            <li
+              key={index}
+              className="group size-8 rounded border-2 border-foreground duration-200 hover:bg-foreground"
             >
-              <Icon className="fill-foreground group-hover:fill-background" />
-            </a>
-          </li>
-        ))}
-      </ul>
+              <a
+                href={href}
+                target="_blank"
+                title={title}
+                className="block size-full p-1"
+                rel="noreferrer"
+              >
+                <Icon className="fill-foreground group-hover:fill-background" />
+              </a>
+            </li>
+          ))}
+        </ul>
+        <Button className="mt-4 self-stretch">Hire Me</Button>
+      </div>
     </section>
   );
 };
