@@ -2,6 +2,7 @@
 import AboutMe from '@/components/about-me';
 import Contact from '@/components/contact';
 import Experience from '@/components/experience';
+import Footer from '@/components/footer';
 import Header from '@/components/header';
 import Hero from '@/components/hero';
 import Projects from '@/components/projects';
@@ -17,6 +18,7 @@ const Home = () => {
       <AboutMe />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 };
