@@ -70,7 +70,9 @@ const Contact: FC<React.HTMLAttributes<HTMLDivElement>> = ({
             <b>high-engaging</b>,<b>user-friendly</b>, and{' '}
             <b>memorable interactive experiences</b>.
           </p>
-          <span className="block font-semibold">Youremail@gmail.com</span>
+          <span className="block font-semibold">
+            peter.khalil.fahmy@gmail.com
+          </span>
         </div>
       </div>
     </div>
