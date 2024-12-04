@@ -57,8 +57,10 @@ const Header: FC<React.HTMLAttributes<HTMLDivElement>> = ({
       </nav>
       <div className="flex items-center gap-4">
         <ThemeSwitcher />
-        <Button className="hidden font-semibold md:flex">
-          Resume <Download className="ms-1" size={20} />
+        <Button className="hidden font-semibold md:flex" asChild>
+          <a href="/Peter Khalil Resume.pdf" download>
+            Resume <Download className="ms-1" size={20} />
+          </a>
         </Button>
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
