@@ -74,22 +74,21 @@ export const SKILLS = [
 
 export const EXPERIENCES = [
   {
-    icon: Icons.GithubIcon,
-    title: 'Software Engineer at Github',
-    date: '2019 - Present',
+    title: 'Frontend Developer at RVE',
+    date: 'Aug 2024 - Present',
     description: [
-      "**Played** a pivotal role in developing innovative solutions for Google's core search algorithms.",
-      '**Collaborated** with a dynamic team of engineers to enhance search accuracy and efficiency.',
-      '**Optimized** user experiences for millions of users worldwide.',
+      '**Improved** website visibility and search engine rankings through optimization strategies.',
+      '**Implemented** additional features to enhance functionality and usability of the existing admin dashboard.',
+      '**Collaborated** with UI/UX designers and backend developers to deliver seamless and user-centric features.',
     ],
   },
   {
-    title: 'Software Engineer at Github',
-    date: '2019 - Present',
+    title: 'Freelancer Frontend Developer',
+    date: 'Mar 2024 - Present',
     description: [
-      "**Played** a pivotal role in developing innovative solutions for Google's core search algorithms.",
-      '**Collaborated** with a dynamic team of engineers to enhance search accuracy and efficiency.',
-      '**Optimized** user experiences for millions of users worldwide.',
+      '**Transformed** Figma designs into fully interactive and responsive websites, ensuring seamless user experiences and pixel-perfect accuracy.',
+      '**Implemented** efficient animations to enhance user experience while maintaining high performance and responsiveness.',
+      '**Assisted** clients in achieving top search engine rankings through effective SEO strategies and optimization techniques.',
     ],
   },
 ];
