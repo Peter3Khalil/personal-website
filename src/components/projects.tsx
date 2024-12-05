@@ -65,19 +65,19 @@ const Project: FC<ProjectProps> = ({
           </Button>
         </div>
       </figure>
-      <article className="max-w-[600px] flex-1 space-y-6">
-        <span className="block text-2xl font-semibold leading-none">
+      <article className="max-w-[600px] flex-1">
+        <span className="mb-1 block text-2xl font-semibold leading-none">
           {String(index + 1).padStart(2, '0')}
         </span>
-        <h3 className="text-2xl font-semibold hover:underline">
+        <h3 className="text-xl font-semibold hover:underline md:text-2xl">
           <a href={previewLink} target="_blank" rel="noreferrer">
             {title}
           </a>
         </h3>
-        <p className="mt-4 text-muted/70 dark:text-muted-foreground">
+        <p className="my-4 text-sm text-muted/70 dark:text-muted-foreground md:text-base">
           {description}
         </p>
-        <ul className="flex flex-wrap items-center gap-4">
+        <ul className="flex flex-wrap items-center gap-2">
           {skills.map((skill, index) => (
             <li
               key={index}
@@ -87,7 +87,7 @@ const Project: FC<ProjectProps> = ({
             </li>
           ))}
         </ul>
-        <menu className="flex gap-4">
+        <menu className="mt-6 flex gap-4">
           <Button asChild>
             <a href={previewLink} target="_blank" rel="noreferrer">
               View
