@@ -10,9 +10,52 @@ const sora = Sora({
   fallback: ['sans-serif'],
 });
 export const metadata: Metadata = {
-  // metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL as string),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
   title: 'Peter Khalil | Software Engineer',
-  description: 'Nextjs Starter Template',
+  description: `I’m a passionate frontend developer with a love for creating
+            seamless, responsive, and user-friendly designs. Crafting intuitive
+            user experiences and breathing life into pixels through code is what
+            excites me every day.`,
+  keywords: [
+    'Peter Khalil Frontend',
+    'Peter Khalil Developer',
+    'Peter Khalil Software Engineer',
+    'Peter Khalil Engineer',
+    'Peter Khalil Frontend developer',
+    'Peter Nextjs Developer',
+    'Peter React Developer',
+    'Peter Javascript Developer',
+    'Peter Portfolio',
+    'Peter Khalil Portfolio',
+    'Peter Khalil Personal Website',
+    'Frontend engineer',
+    'Nextjs Developer',
+    'React Developer',
+    'Typescript developer',
+    'Javascript Developer',
+    'Web developer',
+  ],
+  authors: [
+    {
+      name: 'Peter Khalil',
+      url: 'https://www.linkedin.com/in/peter-khalil-frontend-developer',
+    },
+  ],
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en',
+    url: process.env.NEXT_PUBLIC_BASE_URL,
+    siteName: 'Peter Khalil | Software Engineer',
+    title: 'Peter Khalil | Software Engineer',
+    description: `I’m a passionate frontend developer with a love for creating
+            seamless, responsive, and user-friendly designs. Crafting intuitive
+            user experiences and breathing life into pixels through code is what
+            excites me every day.`,
+    countryName: 'Egypt',
+  },
 };
 
 export default function RootLayout({
