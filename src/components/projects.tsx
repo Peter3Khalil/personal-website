@@ -10,7 +10,7 @@ const Projects: FC<React.HTMLAttributes<HTMLDivElement>> = ({
   return (
     <section className={cn('dark-container', className)} {...props}>
       <h2 className="section-title text-center">My Projects</h2>
-      <ul className="mt-12 flex flex-col gap-5 md:gap-24 lg:gap-28">
+      <ul className="mt-12 flex flex-col gap-20 md:gap-24 lg:gap-28">
         {PROJECTS.map((project, index) => (
           <li key={index}>
             <Project
