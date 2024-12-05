@@ -85,8 +85,10 @@ const Header: FC<React.HTMLAttributes<HTMLDivElement>> = ({
               </ul>
             </nav>
             <div className="flex flex-1 items-end">
-              <Button className="w-full font-semibold">
-                Resume <Download className="ms-1" size={20} />
+              <Button className="w-full font-semibold" asChild>
+                <a href="/Peter Khalil Resume.pdf" download>
+                  Resume <Download className="ms-1" size={20} />
+                </a>
               </Button>
             </div>
           </SheetContent>
