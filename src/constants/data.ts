@@ -130,10 +130,17 @@ export const PROJECTS: ProjectType[] = [
     sourceCodeLink: 'https://github.com/Peter3Khalil/event-town-dashboard',
   },
   {
-    title: 'Portfolio Website for a Company',
+    title: 'RVE Website',
+    imgSrc: 'rve.webp',
+    description: `RVE - Real Vacation Exchange is a timeshare exchange agency established in 2019. They offer vacation exchange opportunities at over 2,400 resorts in 50+ countries, including hotels, villages, and resorts. This allows timeshare owners to explore a wider range of destinations beyond their contracted week.`,
+    skills: ['react', 'typescript', 'tailwindcss', 'shadcnui', 'i18next'],
+    previewLink: 'https://rve-eg.com',
+  },
+  {
+    title: 'Portfolio for Media Production Company',
     imgSrc: 'dynamic.webp',
     description:
-      "A professional portfolio website for showcasing a company's projects and services. It includes sections for about, services, projects, and contact, with a modern and responsive design. The website also supports multiple language.",
+      "A professional portfolio website for showcasing a company's projects and services. It includes sections for about, services, projects, and contact, with a modern and responsive design. The website also supports multiple languages.",
     skills: [
       'react',
       'next.js',
@@ -141,8 +148,10 @@ export const PROJECTS: ProjectType[] = [
       'tailwindcss',
       'shadcnui',
       'framer-motion',
+      'next-intl',
     ],
-    previewLink: 'https://dynamicsa.co/en',
+    previewLink: 'https://video-production-kappa.vercel.app/en',
+    sourceCodeLink: 'https://github.com/Peter3Khalil/video-production',
   },
   {
     title: 'Landing Page for a architectural contracting company',
