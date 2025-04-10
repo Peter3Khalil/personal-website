@@ -24,7 +24,7 @@ const Header: FC<React.HTMLAttributes<HTMLDivElement>> = ({
   return (
     <header
       className={cn(
-        'container sticky top-0 z-50 flex items-center justify-between border-b border-muted bg-background py-4 text-foreground md:py-6',
+        'container sticky top-0 z-50 flex items-center justify-between border-b border-muted bg-background/50 py-4 text-foreground backdrop-blur-md md:py-6',
         className,
       )}
       {...props}
@@ -34,7 +34,7 @@ const Header: FC<React.HTMLAttributes<HTMLDivElement>> = ({
         <span className="text-xl font-bold">Peter</span>
       </a>
       <nav className="hidden md:block">
-        <ul className="flex items-center font-medium capitalize md:gap-4 md:text-sm lg:gap-8 lg:text-lg">
+        <ul className="flex items-center font-medium capitalize md:gap-4 md:text-sm lg:gap-8">
           {SECTIONS.map((item) => (
             <li key={item}>
               <a
